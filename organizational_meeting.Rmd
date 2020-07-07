@@ -1,0 +1,60 @@
+---
+title: "Organizational Meeting"
+author: "Jacob Weverka"
+date: "7/7/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Tuesdays at 1 PM
+
+Range of experience
+
+Community guidelines - R Ladies
+
+Expectations for Presentations
+
+  - No rules (or few rules)
+  - Do your due diligence
+  - First half can be broad concepts
+    - Ground in core model concepts
+  - Should include implementation
+    - Show how to use it in R
+    - Both presenters can do coding
+    - Put models in context against other models
+  - Group github? See link in google sheet
+  - We'll do google drive
+  - Check out the lecture notes
+    - "people to talk to" column for each week
+  - Presentation Sept 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
