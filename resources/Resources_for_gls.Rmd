@@ -1,0 +1,56 @@
+---
+title: "Resources for GLS"
+author: "Jacob Weverka"
+date: "7/9/2020"
+output: html_document
+---
+
+
+
+
+
+<font size="5"> Youtube Links </font>
+
+[Generalized Least Square Regression video](https://www.youtube.com/watch?v=j_WQQfaJQLI)
+
+  - explains math behind it
+  
+[Basic intro to GLS](https://www.youtube.com/watch?v=XVyx8r8ZRLA)
+
+  - explains math and assumptions
+  
+[Theory of GLS](https://www.youtube.com/watch?v=ZFQDn84fuJI)
+
+  - deeper math behind GLS
+  
+[GLS demo in R](https://www.youtube.com/watch?v=P-WYkSZp9lY)
+
+  - in R GUI, a bit long
+
+
+<font size="5"> Coding Resources </font>
+
+
+[R vignetter for gls](https://stat.ethz.ch/R-manual/R-devel/library/nlme/html/gls.html)
+
+  - ```{r} gls ```
+  
+[Least Square Estimates Examples](https://rpubs.com/cbw1243/gls)
+
+  - Feasible GLS and Iterative Feasible GLS
+  
+[Time-Series Regression and Generalized Least Squares in R](https://pdfs.semanticscholar.org/7c1b/5ba81a4fcde9abe7efe49228244a98d5ce11.pdf)
+
+  - textbook chapter
+
+
+
+
+
+
+
+
+
+
+
+
