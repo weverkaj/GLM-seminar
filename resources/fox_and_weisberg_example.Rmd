@@ -1,0 +1,104 @@
+---
+title: "Example from Fox and Weisberg"
+author: "Jacob Weverka"
+date: "7/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<br/><br/>
+<br/><br/>
+<br/><br/>
+
+
+<font size="4"> Serially Correlated Errors </font>
+
+In time series data, errors from a  regression model are unlikely to be independent
+
+  - assume that the process generating errors is stationary (need to figure out what this means)
+  - need to figure out this math in general
+  
+<br/><br/>
+  
+<font size="4"> Using the gls Function </font>
+
+The ```{r} gls() ``` function is from the nlme package
+
+```{r}
+# install.packages("nlme")
+library(nlme)
+```
+
+Load some example data from the "car" package (Companion to Applied Regression) 
+
+```{r}
+# install.packages("car")
+library(car)
+
+Hartnagel
+
+```
+
+
+year, 1931–1968.
+
+  - tfr, the total fertility rate, births per 1000 women-
+  - partic, women’s labor-force participation rate, per 1000.
+  - degrees, women’s post-secondary degree rate, per 10,000.
+  - fconvict, women’s indictable-offense conviction rate, per 100,000.
+  - ftheft, women’s theft conviction rate, per 100,000.
+  - mconvict, men’s indictable-offense conviction rate, per 100,000.
+  - mtheft, men’s theft conviction rate, per 100,000.
+  
+
+Here's a first look on women's conviction rates through time
+
+```{r}
+# library(tidyverse)
+
+p = ggplot(data = Hartnagel, aes(x = year, y = fconvict)) + 
+  geom_point() +
+  geom_line() +
+  ylab("Convictions per 100,000 Women")
+p
+```
+
+
+Preliminary Ordinary Least Squares regression
+```{r}
+mod.ols = lm(fconvict ~ tfr + partic + degrees + mconvict, data = Hartnagel)
+summary(mod.ols)
+```
+
+According to the OLS regression, Womxn's crime rate declines with fertility and increases with participation in the labor force
+
+<br/><br/>
+
+However, a graph of residuals shows that residuals may be autocorrelated:
+
+```{r}
+q = ggplot(data = Hartnagel, aes(x = year, y = residuals(mod.ols))) +
+  geom_point()
+
+q
+```
+We can compute and plot the autocorrelation and partial autocorrelation functions of a time series using the ```{r} acf() ``` function.
+
+```{r}
+acf(residuals(mod.ols))
+acf(residuals(mod.ols), type = "partial")
+```
+
+
+
+
+
+
+
+
+
+
+
+
