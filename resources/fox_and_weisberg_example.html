@@ -460,10 +460,10 @@ q</code></pre>
 <pre class="r"><code>durbinWatsonTest(mod.ols, max.lag = 5)</code></pre>
 <pre><code>##  lag Autocorrelation D-W Statistic p-value
 ##    1       0.6883450     0.6168636   0.000
-##    2       0.1922665     1.5993563   0.184
-##    3      -0.1685699     2.3187448   0.290
-##    4      -0.3652775     2.6990538   0.018
-##    5      -0.3673240     2.6521103   0.008
+##    2       0.1922665     1.5993563   0.128
+##    3      -0.1685699     2.3187448   0.310
+##    4      -0.3652775     2.6990538   0.012
+##    5      -0.3673240     2.6521103   0.010
 ##  Alternative hypothesis: rho[lag] != 0</code></pre>
 <pre class="r"><code>lmtest::dwtest(mod.ols)</code></pre>
 <pre><code>## 
