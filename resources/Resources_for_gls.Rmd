@@ -43,6 +43,7 @@ output: html_document
 
   - textbook chapter
 
+[Spatial autocorrelation example](https://mltconsecol.github.io/TU_LandscapeAnalysis_Documents/Assignments_web/Assignment07_Mantel_SpRegress.html)
 
 
 
