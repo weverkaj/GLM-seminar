@@ -1,0 +1,68 @@
+---
+title: 'Notes: Week 1'
+author: "Jacob Weverka"
+date: "7/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Linear models
+ - general form is equation of a line
+ - linear models as stoachastic models:
+   - deterministic models have exact relationships between x and y
+   - stochastic has scatter of of Y measurements around model prediction
+   - statistical models have a deterministic part and a stochastic part
+   
+   
+Linear Regression
+  - fit a straight line through variable
+  - can be multiple explanatory variables
+
+Assumptions
+  - homoscedasticity
+  - linear realtionship
+  - normality across range
+  - no multicollinearity
+  - fixed X (explanatory variables are deterministic)
+  
+  
+Other issues
+  - extrapolation - shouldn't be used outsice of range of regression
+  
+  
+  
+  
+  
+#### ANOVA
+  - test for differences between group means
+  - F-test - tests hypothesis that two variances are equal
+  
+  
+ANOVA assumptions
+  1. Observations are random and independent
+  2. Observations are normally distributed
+  3. Variances are equal between groups
+  4. Equal sample sizes not required
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
