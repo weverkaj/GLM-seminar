@@ -26,6 +26,8 @@ output: html_document
 [GLS demo in R](https://www.youtube.com/watch?v=P-WYkSZp9lY)
 
   - in R GUI, a bit long
+  
+[GLS Theory](https://www.youtube.com/watch?v=wCJ8I-MtJdQ)
 
 
 <font size="5"> Coding Resources </font>
@@ -45,6 +47,7 @@ output: html_document
 
 [Spatial autocorrelation example](https://mltconsecol.github.io/TU_LandscapeAnalysis_Documents/Assignments_web/Assignment07_Mantel_SpRegress.html)
 
+[Coded timeseries example](https://sakai.unc.edu/access/content/group/2842013b-58f5-4453-aa8d-3e01bacbfc3d/public/Ecol562_Spring2012/docs/lectures/lecture17.htm)
 
 
 

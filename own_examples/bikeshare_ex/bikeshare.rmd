@@ -1,0 +1,67 @@
+---
+title: "bikeshare"
+author: "Jacob Weverka"
+date: "7/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load packages
+
+```{r, message=FALSE}
+library(nlme)
+library(tidyverse)
+library(car)
+```
+
+
+Add in the data
+```{r}
+bikes = read_csv("own_examples/bikeshare_ex/datasets_1701_2976_bike_sharing_daily.csv")
+```
+
+Take a look
+
+```{r}
+ggplot(data = bikes, aes(x = dteday, y = cnt)) +
+  geom_point() +
+  geom_line()
+```
+Preliminary lm
+
+```{r}
+
+bike.lm = lm(cnt ~ temp + hum + windspeed, data = bikes)
+summary(bike.lm)
+
+```
+```{r}
+ggplot(data = bikes, aes(x = dteday, y = residuals(bike.lm))) +
+  geom_col()
+```
+autocorrelation function
+```{r}
+acf(residuals(bike.lm))
+acf(residuals(bike.lm), type = "partial")
+```
+
+```{r}
+durbinWatsonTest(bike.lm, max.lag = 360)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
