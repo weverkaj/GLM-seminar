@@ -1,0 +1,74 @@
+---
+title: "AIC"
+author: "Jacob Weverka"
+date: "7/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+What is model selection?
+
+  - Multiple models representing distinct hypotheses
+  - Set of predictors are important for response. Which are best supported?
+  - I have a large number of predictors and want to see which are important
+  
+  
+Why not throw all model parameters in and see what happens?
+
+  - predictors may be correlated
+  
+  
+Akaike Information Criterion
+
+  - Compares models, chooses the best one
+  - Balances the number of parameters with model fit
+  - Smaller number is better
+  - Only works as a comparison. Absolute value has no real meaning
+  
+  
+How to use
+
+  - create lm object
+  - use function `AIC()` to calculate AIC
+  
+
+Choosing between models
+
+  - lowest value is best model
+  - models with value difference <2 are probably not that different
+  - can calculate relative support for each model by likelihood
+  
+  
+Actually implementing
+
+  - package `MuMIn` sequentially runs through models and removes one parameter at a time
+  - 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
