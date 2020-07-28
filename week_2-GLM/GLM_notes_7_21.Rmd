@@ -1,0 +1,32 @@
+---
+title: "Week 2 GLM Notes"
+author: "Jacob Weverka"
+date: "7/21/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Motivation for extending lm
+  - when assumptions break down
+  - distribution used in GLM are used from natural exponential family of distributions
+  
+  
+All exponential family distributions can be put in an exponent form
+  - theta and phi
+    - theta is "canonical"
+    - phi is "dispersion"
+  - look at which has an i subscript
+  
+3 components to a GLM
+  - Random component (probability distribution)
+    - in regular lm it's normal distribution, but can be anything for GLM
+  - Systematic component
+  - Link function
+    - operates on mean (not on response variable)
+
+
+
+Residuals
