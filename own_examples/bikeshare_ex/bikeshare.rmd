@@ -20,7 +20,7 @@ library(car)
 
 Add in the data
 ```{r}
-bikes = read_csv("own_examples/bikeshare_ex/datasets_1701_2976_bike_sharing_daily.csv")
+bikes = read_csv("datasets_1701_2976_bike_sharing_daily.csv")
 ```
 
 Take a look
@@ -49,7 +49,7 @@ acf(residuals(bike.lm), type = "partial")
 ```
 
 ```{r}
-durbinWatsonTest(bike.lm, max.lag = 360)
+durbinWatsonTest(bike.lm, max.lag = 5)
 ```
 
 
