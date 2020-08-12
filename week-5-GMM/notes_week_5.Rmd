@@ -1,0 +1,62 @@
+---
+title: "Linear Mixed Effects Models"
+author: "Jacob Weverka"
+date: "8/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Linear Mixed Effects Models
+
+  - Fixed and random effects
+  - Used on random and clustered data
+  - Nested and repeated measures
+  
+  
+Fixed or Random?
+
+  - continuous has to be a fixed effect
+  - categorical can be random
+    - Are observations independent? Independent -> Fixed
+      - Is it part of your hypothesis? -> Fixed
+    - If non-independent:
+      - Does research question hinge on comparing means between levels? Yes -> Fixed
+        - No -> Random effect
+      
+      
+Repeated measures:
+
+  - Experimental unit is a random effect
+  - Ex: in a plot, you measure percent cover monthly, or on a fish you measure heart after several trials
+  
+  
+Crossed or nested random effects:
+
+  - Crossed: all treatments occur in combination with each other
+  - Nested: certain individuals only occur in specific treatment
+  
+  
+Deciding which random effects structure to include in model:
+
+  - Fixed effects, random intercepts, random slopes
+  
+Interpreting model output
+
+  - REML criterion at convergence
+  - Residual variance
+  
+  
+Post-hoc tests
+
+ - Multiple comparisons
+ - 
+
+
+
+
+
+
+  
