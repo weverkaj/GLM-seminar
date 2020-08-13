@@ -49,6 +49,8 @@ output: html_document
 
 [Coded timeseries example](https://sakai.unc.edu/access/content/group/2842013b-58f5-4453-aa8d-3e01bacbfc3d/public/Ecol562_Spring2012/docs/lectures/lecture17.htm)
 
+[Stats class from UNC with lecture notes](https://sakai.unc.edu/access/content/group/2842013b-58f5-4453-aa8d-3e01bacbfc3d/public/Ecol562_Spring2012/docs/lectures.htm)
+
 
 
 
