@@ -53,12 +53,59 @@ durbinWatsonTest(bike.lm, max.lag = 5)
 ```
 
 
+```{r}
+cs1 = corARMA(p=1, q = 0)
+cs2 = corARMA(p=1, q = 1)
+cs3 = corARMA(p=2, q = 1)
+
+mod1 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs1)
+mod2 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs2)
+
+AIC(bike.lm, mod1, mod2)
+```
+
+
+```{r}
+cs4 = corARMA(p=2, q = 0)
+cs5 = corARMA(p=3, q = 1)
+cs6 = corARMA(p=3, q = 2)
+
+mod4 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs4)
+mod5 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs5)
+mod6 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs6)
+
+AIC(mod4, mod5, mod6)
+```
+
+```{r}
+
+cs7 = corARMA(q = 1)
+cs8 = corARMA(q = 2)
+cs9 = corARMA(q = 3)
+
+mod7 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs7)
+mod8 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs8)
+mod9 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs9)
+
+AIC(mod7, mod8, mod9)
+```
+
+```{r}
+acf(residuals(bike.lm), type = "partial")
+acf(residuals(mod5), type = "partial")
+acf(residuals(mod6), type = "partial")
+
+```
 
 
 
+```{r}
+cs10 = corARMA(p = 4, q = 1)
 
+mod10 = gls(cnt ~ temp + hum + windspeed, data = bikes, correlation = cs10)
 
-
+AIC(mod10)
+```
 
 
 
